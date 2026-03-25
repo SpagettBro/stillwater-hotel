@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dwwwuawmj04jh"]
+
+[ext_resource type="Script" uid="uid://bjpe0uj0jkbw3" path="res://scenes/keeper.gd" id="1_6b2k5"]
+[ext_resource type="PackedScene" uid="uid://dy2qeoi8jc1go" path="res://assets/3d-models/Ogre.glb" id="1_nogqu"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6b2k5"]
+
+[node name="keeper" type="CharacterBody3D" unique_id=1854623759]
+script = ExtResource("1_6b2k5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=526128640]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0893273, 0)
+shape = SubResource("CapsuleShape3D_6b2k5")
+
+[node name="Ogre" parent="." unique_id=882893132 instance=ExtResource("1_nogqu")]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 1.5614517, 0)
