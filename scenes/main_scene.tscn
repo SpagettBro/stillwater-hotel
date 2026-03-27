@@ -3,6 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://ce6hkkvc685tb" path="res://scenes/player.tscn" id="1_w2twt"]
 [ext_resource type="PackedScene" uid="uid://dwwwuawmj04jh" path="res://scenes/keeper.tscn" id="3_7ykc4"]
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_pw63i"]
+vertices = PackedVector3Array(-29.5, 0.01999998, -29.5, -29.5, 0.01999998, 29.5, 29.5, 0.01999998, 29.5, 29.5, 0.01999998, -29.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+cell_height = 0.01
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_und3l"]
 size = Vector3(60, 2, 60)
 
@@ -11,20 +16,35 @@ size = Vector3(60, 2, 60)
 
 [node name="main_scene" type="Node3D" unique_id=1593596941]
 
-[node name="ground" type="StaticBody3D" parent="." unique_id=262173188]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ground" unique_id=2106776310]
-shape = SubResource("BoxShape3D_und3l")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="ground" unique_id=1966978250]
-mesh = SubResource("BoxMesh_w2twt")
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=927087469]
 transform = Transform3D(1, 0, 0, 0, 0.026805006, 0.9996407, 0, -0.9996407, 0.026805006, 0, 16.025465, 0)
 shadow_enabled = true
 
 [node name="player" parent="." unique_id=1556460835 instance=ExtResource("1_w2twt")]
 
-[node name="keeper" parent="." unique_id=1854623759 instance=ExtResource("3_7ykc4")]
+[node name="keeper" parent="." unique_id=1854623759 node_paths=PackedStringArray("patrol_points") instance=ExtResource("3_7ykc4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.475777)
+patrol_points = [NodePath("../PatrolPoints/Point1"), NodePath("../PatrolPoints/Point2"), NodePath("../PatrolPoints/Point3")]
+
+[node name="PatrolPoints" type="Node3D" parent="." unique_id=699394983]
+
+[node name="Point1" type="Marker3D" parent="PatrolPoints" unique_id=666627331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16.12252)
+
+[node name="Point2" type="Marker3D" parent="PatrolPoints" unique_id=1172906276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.109213, 0, -7.869526)
+
+[node name="Point3" type="Marker3D" parent="PatrolPoints" unique_id=294757276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.16639, 0, -8.7812395)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=843629719]
+navigation_mesh = SubResource("NavigationMesh_pw63i")
+
+[node name="ground" type="StaticBody3D" parent="NavigationRegion3D" unique_id=262173188]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/ground" unique_id=2106776310]
+shape = SubResource("BoxShape3D_und3l")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/ground" unique_id=1966978250]
+mesh = SubResource("BoxMesh_w2twt")
