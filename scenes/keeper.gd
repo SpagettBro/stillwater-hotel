@@ -15,7 +15,7 @@ extends CharacterBody3D
 @export var patrol_wait_time: float = 3.0
 @export var update_interval: float = 0.2
  
-const VIEW_ANGLE: float = 190.0
+const VIEW_ANGLE: float = 90.0
 const SMOOTHING_FACTOR = 0.2
  
 # --------------------
@@ -174,11 +174,11 @@ func _move_towards(next_pos: Vector3, speed: float) -> void:
 	dir = dir.normalized()
 	var current_facing = -global_transform.basis.z
 	var new_dir = current_facing.slerp(dir, 0.12).normalized()
-#	look_at(global_transform.origin + new_dir, Vector3.UP)
-	var target_dir = (target.global_transform.origin - global_transform.origin)
-	target_dir.y = 0
-	var smoothed = (-global_transform.basis.z).slerp(target_dir.normalized(), 0.1)
-	look_at(global_transform.origin + smoothed, Vector3.UP)
+	look_at(global_transform.origin + new_dir, Vector3.UP)
+#	var target_dir = (target.global_transform.origin - global_transform.origin)
+#	target_dir.y = 0
+#	var smoothed = (-global_transform.basis.z).slerp(target_dir.normalized(), 0.1)
+#	look_at(global_transform.origin + smoothed, Vector3.UP)
  
 	velocity.x = dir.x * speed
 	velocity.z = dir.z * speed
@@ -211,9 +211,9 @@ func _looking() -> void:
 	if angle_deg > VIEW_ANGLE * 0.5:
 		return
  
-#	var ray_forward = -vision_ray.global_transform.basis.z
-#	var new_dir = ray_forward.slerp(to_player, SMOOTHING_FACTOR).normalized()
-#	vision_ray.look_at(vision_ray.global_transform.origin + new_dir, Vector3.UP)
+	var ray_forward = -vision_ray.global_transform.basis.z
+	var new_dir = ray_forward.slerp(to_player, SMOOTHING_FACTOR).normalized()
+	vision_ray.look_at(vision_ray.global_transform.origin + new_dir, Vector3.UP)
  
 # --------------------
 # SOUND
