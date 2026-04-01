@@ -6,24 +6,30 @@ const SPRINT_SPEED = 8.0
 const JUMP_VELOCITY = 4.8
 const SENSITIVITY = 0.004
 
+const crouch_height = 0.7
+const stand_height = 1.4
+var crouching = false
+
 #bob variables
 const BOB_FREQ = 2.4
-const BOB_AMP = 0.08
+const BOB_AMP = 0.04
 var t_bob = 0.0
 
 #fov variables
 const BASE_FOV = 75.0
-const FOV_CHANGE = 1.5
+const FOV_CHANGE = 1
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = 9.8
+var gravity = 9.81
 
 @onready var head = $CameraPivot
 @onready var camera = $CameraPivot/Camera3D
+@onready var body = $CollisionShape3D
 
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	PlayerManager.player = self
 
 
 func _unhandled_input(event):
@@ -34,14 +40,10 @@ func _unhandled_input(event):
 
 
 func _physics_process(delta):
+	_crouch()
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-
-	# Handle Jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-	
 	# Handle Sprint.
 	if Input.is_action_pressed("sprint"):
 		speed = SPRINT_SPEED
@@ -73,6 +75,13 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
+func _crouch():
+	if Input.is_action_just_pressed("crouch"):
+		crouching = !crouching
+		if crouching:
+			body.shape.height = crouch_height
+		else:
+			body.shape.height = stand_height
 
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO
