@@ -26,6 +26,16 @@ var gravity = 9.81
 @onready var camera = $CameraPivot/Camera3D
 @onready var body = $CollisionShape3D
 
+@export_group("Holding Objects")
+@export var throwForce = 7.5
+@export var followSpeed = 5.0
+@export var followDistance = 2.5
+@export var maxDistanceFromCamera = 5.0
+@export var dropBelowPlayer = false
+@export var groundRay: RayCast3D # Only needed if dropBelowPlayer is true
+
+@onready var interactRay = $CameraPivot/Camera3D/InteractRay
+var heldObject: RigidBody3D
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -40,6 +50,7 @@ func _unhandled_input(event):
 
 
 func _physics_process(delta):
+	_handle_holding_objects()
 	_crouch()
 	# Add the gravity.
 	if not is_on_floor():
@@ -88,3 +99,40 @@ func _headbob(time) -> Vector3:
 	pos.y = sin(time * BOB_FREQ) * BOB_AMP
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
 	return pos
+	
+func _set_held_object(body):
+	if body is RigidBody3D:
+		heldObject = body
+	
+func _drop_held_object():
+	heldObject = null
+	
+func _throw_held_object():
+	var obj = heldObject
+	_drop_held_object()
+	obj.apply_central_impulse(-camera.global_basis.z * throwForce * 10)
+	
+func _handle_holding_objects():
+	# Throwing Objects
+	if Input.is_action_just_pressed("throw"):
+		if heldObject != null: _throw_held_object()
+		
+	# Dropping Objects
+	if Input.is_action_just_pressed("interact"):
+		if heldObject != null: _drop_held_object()
+		elif interactRay.is_colliding(): _set_held_object(interactRay.get_collider())
+		
+	# Object Following
+	if heldObject != null:
+		var targetPos = camera.global_transform.origin + (camera.global_basis * Vector3(0, 0, -followDistance)) # 2.5 units in front of camera
+		var objectPos = heldObject.global_transform.origin # Held object position
+		heldObject.linear_velocity = (targetPos - objectPos) * followSpeed # Our desired position
+		
+		# Drop the object if it's too far away from the camera
+		if heldObject.global_position.distance_to(camera.global_position) > maxDistanceFromCamera:
+			_drop_held_object()
+			
+		# Drop the object if the player is standing on it (must enable dropBelowPlayer and set a groundRay/RayCast3D below the player)
+		if dropBelowPlayer && groundRay.is_colliding():
+			if groundRay.get_collider() == heldObject: _drop_held_object()
+	

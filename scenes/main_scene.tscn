@@ -23,6 +23,12 @@ height = 4.0
 height = 4.0
 radius = 1.0
 
+[sub_resource type="BoxMesh" id="BoxMesh_pw63i"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pw63i"]
+size = Vector3(0.5, 0.5, 0.5)
+
 [node name="main_scene" type="Node3D" unique_id=1593596941]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=927087469]
@@ -68,3 +74,13 @@ mesh = SubResource("CylinderMesh_pw63i")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="pillar" unique_id=132219339]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8385725, 10.006327)
 shape = SubResource("CylinderShape3D_pw63i")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1779683031]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5894346, 1.9183056, 0)
+angular_damp = 0.5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D" unique_id=1965114154]
+mesh = SubResource("BoxMesh_pw63i")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=607630690]
+shape = SubResource("BoxShape3D_pw63i")
