@@ -218,7 +218,7 @@ func _looking() -> void:
 # --------------------
 # SOUND
 # --------------------
-func _hear_noise(pos: Vector3) -> void:
+func hear_noise(pos: Vector3) -> void:
 	if state not in [State.CHASE, State.ATTACK]:
 		investigate_position = pos
 		_enter_state(State.INVESTIGATE)

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://glhydiuol7t5"]
+
+[ext_resource type="Script" uid="uid://bxgl31vylwr24" path="res://scenes/throwable.gd" id="1_ef5ia"]
+[ext_resource type="AudioStream" uid="uid://cfphwykkjd3li" path="res://assets/sfx/mixkit-wood-hard-hit-2182.mp3" id="2_ef5ia"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_pw63i"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pw63i"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="Throwable" type="RigidBody3D" unique_id=520692916 groups=["Throwable"]]
+angular_damp = 0.5
+script = ExtResource("1_ef5ia")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1741095007]
+mesh = SubResource("BoxMesh_pw63i")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=235793674]
+shape = SubResource("BoxShape3D_pw63i")
+
+[node name="SFX" type="AudioStreamPlayer3D" parent="." unique_id=25919708]
+stream = ExtResource("2_ef5ia")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="SFX" to="." method="_on_sfx_finished"]

@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 PlayerManager="*uid://dvadtwiyn0enr"
 
+[global_group]
+
+Throwable=""
+Enemy=""
+
 [input]
 
 move_left={

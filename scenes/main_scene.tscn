@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ce6hkkvc685tb" path="res://scenes/player.tscn" id="1_w2twt"]
 [ext_resource type="PackedScene" uid="uid://dwwwuawmj04jh" path="res://scenes/keeper.tscn" id="3_7ykc4"]
+[ext_resource type="PackedScene" uid="uid://glhydiuol7t5" path="res://scenes/throwable.tscn" id="3_pu3yx"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_pw63i"]
 vertices = PackedVector3Array(-29.5, 0.01999998, -29.5, -29.5, 0.01999998, 29.5, 29.5, 0.01999998, 29.5, 29.5, 0.01999998, -29.5)
@@ -22,12 +23,6 @@ height = 4.0
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_pw63i"]
 height = 4.0
 radius = 1.0
-
-[sub_resource type="BoxMesh" id="BoxMesh_pw63i"]
-size = Vector3(0.5, 0.5, 0.5)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_pw63i"]
-size = Vector3(0.5, 0.5, 0.5)
 
 [node name="main_scene" type="Node3D" unique_id=1593596941]
 
@@ -75,12 +70,5 @@ mesh = SubResource("CylinderMesh_pw63i")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8385725, 10.006327)
 shape = SubResource("CylinderShape3D_pw63i")
 
-[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1779683031]
+[node name="Throwable" parent="." unique_id=520692916 instance=ExtResource("3_pu3yx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5894346, 1.9183056, 0)
-angular_damp = 0.5
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D" unique_id=1965114154]
-mesh = SubResource("BoxMesh_pw63i")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=607630690]
-shape = SubResource("BoxShape3D_pw63i")
