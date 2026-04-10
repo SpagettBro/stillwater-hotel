@@ -12,6 +12,7 @@ size = Vector3(0.5, 0.5, 0.5)
 [node name="Throwable" type="RigidBody3D" unique_id=520692916 groups=["Throwable"]]
 angular_damp = 0.5
 script = ExtResource("1_ef5ia")
+max_distance = 1.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1741095007]
 mesh = SubResource("BoxMesh_pw63i")

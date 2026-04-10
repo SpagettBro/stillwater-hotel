@@ -71,4 +71,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8385725, 10.006327)
 shape = SubResource("CylinderShape3D_pw63i")
 
 [node name="Throwable" parent="." unique_id=520692916 instance=ExtResource("3_pu3yx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5894346, 1.9183056, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5894346, 1.9183056, -5.540373)
+max_distance = 100.0
