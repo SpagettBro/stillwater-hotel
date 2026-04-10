@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 
 
 func _on_sfx_finished() -> void:
-	get_tree().call_group("enemy", "hear_noise", global_position)
+	get_tree().call_group("Enemy", "hear_noise", global_position)
 
 
 func _on_body_entered(body: Node) -> void:
