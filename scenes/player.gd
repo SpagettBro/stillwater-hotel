@@ -102,9 +102,9 @@ func _headbob(time) -> Vector3:
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
 	return pos
 	
-func _set_held_object(hitbox):
-	if hitbox is RigidBody3D:
-		heldObject = hitbox
+func _set_held_object(p_hitbox):
+	if p_hitbox is RigidBody3D:
+		heldObject = p_hitbox
 	
 func _drop_held_object():
 	heldObject = null

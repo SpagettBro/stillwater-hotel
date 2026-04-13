@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://glhydiuol7t5" path="res://scenes/throwable.tscn" id="3_pu3yx"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_pw63i"]
-vertices = PackedVector3Array(-29.5, 0.01999998, -29.5, -29.5, 0.01999998, 29.5, 29.5, 0.01999998, 29.5, 29.5, 0.01999998, -29.5)
-polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+vertices = PackedVector3Array(-29.5, 0.01999998, 5, -10.25, 0.01999998, 5, -10.25, 0.01999998, 4, -8.75, 0.01999998, 3.5, -8.75, 0.01999998, -29.5, -29.5, 0.01999998, -29.5, -7, 0.01999998, 5, -1.5, 0.01999998, 5, -1.5, 0.01999998, 4, -7.75, 0.01999998, 3.5, 0, 0.01999998, 3.5, 0, 0.01999998, -29.5, 1.5, 0.01999998, 5, 6.75, 0.01999998, 5, 6.75, 0.01999998, 4, 1, 0.01999998, 3.5, 8.25, 0.01999998, 3.5, 8.25, 0.01999998, -29.5, 10, 0.01999998, 4.25, 10, 0.01999998, 5, 29.5, 0.01999998, 5, 9.25, 0.01999998, 3.5, 29.5, 0.01999998, -29.5, -9.25, 4.0199995, 4.5, -9.25, 4.0199995, 5.5, -8.25, 4.0199995, 5.5, -8.25, 4.0199995, 4.5, -0.5, 4.0199995, 4.5, -0.5, 4.0199995, 5.5, 0.5, 4.0199995, 5.5, 0.5, 4.0199995, 4.5, 7.75, 4.0199995, 5.5, 9, 4.0199995, 5.25, 8.75, 4.0199995, 4.5, 7.75, 4.0199995, 4.5, -9, 0.01999998, 4.75, -9, 0.01999998, 5.25, -8.5, 0.01999998, 5.25, -8.5, 0.01999998, 4.75, -0.25, 0.01999998, 4.75, -0.25, 0.01999998, 5.25, 0.25, 0.01999998, 5.25, 0.25, 0.01999998, 4.75, 8, 0.01999998, 4.75, 8, 0.01999998, 5.25, 8.5, 0.01999998, 5.25, 8.5, 0.01999998, 4.75, -10.25, 0.01999998, 6, -8.75, 0.01999998, 6.5, -29.5, 0.01999998, 29.5, -8.75, 0.01999998, 29.5, -1.5, 0.01999998, 6, -7.75, 0.01999998, 6.5, 0, 0.01999998, 29.5, 0, 0.01999998, 6.5, 6.75, 0.01999998, 6, 1, 0.01999998, 6.5, 8.25, 0.01999998, 29.5, 8.25, 0.01999998, 6.5, 10, 0.01999998, 5.75, 9.25, 0.01999998, 6.5, 29.5, 0.01999998, 29.5)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(4, 0, 5), PackedInt32Array(8, 7, 6), PackedInt32Array(6, 9, 8), PackedInt32Array(8, 9, 10), PackedInt32Array(10, 9, 11), PackedInt32Array(11, 9, 4), PackedInt32Array(9, 3, 4), PackedInt32Array(14, 13, 12), PackedInt32Array(12, 15, 14), PackedInt32Array(14, 15, 16), PackedInt32Array(16, 15, 17), PackedInt32Array(17, 15, 11), PackedInt32Array(15, 10, 11), PackedInt32Array(20, 19, 18), PackedInt32Array(18, 21, 20), PackedInt32Array(20, 21, 22), PackedInt32Array(22, 21, 17), PackedInt32Array(21, 16, 17), PackedInt32Array(26, 25, 23), PackedInt32Array(23, 25, 24), PackedInt32Array(30, 29, 27), PackedInt32Array(27, 29, 28), PackedInt32Array(33, 32, 34), PackedInt32Array(34, 32, 31), PackedInt32Array(38, 37, 35), PackedInt32Array(35, 37, 36), PackedInt32Array(42, 41, 39), PackedInt32Array(39, 41, 40), PackedInt32Array(46, 45, 43), PackedInt32Array(43, 45, 44), PackedInt32Array(0, 1, 47), PackedInt32Array(47, 48, 0), PackedInt32Array(0, 48, 50), PackedInt32Array(0, 50, 49), PackedInt32Array(6, 7, 51), PackedInt32Array(6, 51, 52), PackedInt32Array(52, 51, 54), PackedInt32Array(52, 54, 53), PackedInt32Array(52, 53, 50), PackedInt32Array(50, 48, 52), PackedInt32Array(12, 13, 55), PackedInt32Array(12, 55, 56), PackedInt32Array(56, 55, 58), PackedInt32Array(56, 58, 57), PackedInt32Array(56, 57, 53), PackedInt32Array(53, 54, 56), PackedInt32Array(59, 19, 20), PackedInt32Array(59, 20, 60), PackedInt32Array(60, 20, 61), PackedInt32Array(60, 61, 57), PackedInt32Array(57, 58, 60)]
 cell_height = 0.01
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_und3l"]
@@ -60,14 +60,31 @@ shape = SubResource("BoxShape3D_und3l")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/ground" unique_id=1966978250]
 mesh = SubResource("BoxMesh_w2twt")
 
-[node name="pillar" type="StaticBody3D" parent="." unique_id=1373256841]
+[node name="pillar" type="StaticBody3D" parent="NavigationRegion3D" unique_id=1373256841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 5)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="pillar" unique_id=598554238]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7445953, 9.935644)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/pillar" unique_id=598554238]
 mesh = SubResource("CylinderMesh_pw63i")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="pillar" unique_id=132219339]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8385725, 10.006327)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/pillar" unique_id=132219339]
+shape = SubResource("CylinderShape3D_pw63i")
+
+[node name="pillar2" type="StaticBody3D" parent="NavigationRegion3D" unique_id=531366786]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.3307705, 2, 5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/pillar2" unique_id=765704743]
+mesh = SubResource("CylinderMesh_pw63i")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/pillar2" unique_id=1853843041]
+shape = SubResource("CylinderShape3D_pw63i")
+
+[node name="pillar3" type="StaticBody3D" parent="NavigationRegion3D" unique_id=1463115181]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.738237, 2, 5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/pillar3" unique_id=2128885167]
+mesh = SubResource("CylinderMesh_pw63i")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/pillar3" unique_id=58294465]
 shape = SubResource("CylinderShape3D_pw63i")
 
 [node name="Throwable" parent="." unique_id=520692916 instance=ExtResource("3_pu3yx")]

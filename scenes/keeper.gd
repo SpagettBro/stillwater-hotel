@@ -95,7 +95,7 @@ func _state_investigate(delta: float) -> void:
 	if _can_see_player():
 		_enter_state(State.CHASE)
  
-func _state_chase(delta: float) -> void:
+func _state_chase(_delta: float) -> void:
 	if not target:
 		_enter_state(State.RETURN)
 		return
@@ -115,7 +115,7 @@ func _state_attack() -> void:
 	# TODO: handle player capture
 	_enter_state(State.CHASE)
  
-func _state_return(delta: float) -> void:
+func _state_return(_delta: float) -> void:
 	if agent.is_navigation_finished():
 		_enter_state(State.PATROL)
 	elif _can_see_player():

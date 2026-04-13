@@ -9,7 +9,7 @@ func _ready() -> void:
 	max_contacts_reported = 4
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func _on_sfx_finished() -> void:
@@ -19,6 +19,6 @@ func _on_sfx_finished() -> void:
 		if distance <= max_distance:
 			enemy.hear_noise(global_position)
 
-func _on_body_entered(body: Node) -> void:
+func _on_body_entered(_body: Node) -> void:
 	if not sfx.playing:
 		sfx.play()
