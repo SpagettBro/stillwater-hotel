@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://ce6hkkvc685tb"]
 
 [ext_resource type="Script" uid="uid://dnbwyejewvswd" path="res://scenes/player.gd" id="1_qhqgy"]
-[ext_resource type="PackedScene" uid="uid://chspmkajrjj23" path="res://assets/3d-models/no_head.glb" id="2_qhqgy"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_g2els"]
+radius = 0.25
+height = 1.4
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g2els"]
 radius = 0.22
@@ -11,21 +14,20 @@ height = 1.4
 script = ExtResource("1_qhqgy")
 throwForce = 0.7
 
-[node name="pivot" type="Node3D" parent="." unique_id=17844838]
-
-[node name="no_head" parent="pivot" unique_id=1304552277 instance=ExtResource("2_qhqgy")]
-transform = Transform3D(-0.34, 0, 5.1338574e-08, 0, 0.34, 0, -5.1338574e-08, 0, -0.34, 0, 0, 0)
+[node name="Body" type="MeshInstance3D" parent="." unique_id=2105889535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9104428, 0)
+mesh = SubResource("CapsuleMesh_g2els")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1301128428]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9380833, 0)
 shape = SubResource("CapsuleShape3D_g2els")
 
-[node name="CameraPivot" type="Marker3D" parent="." unique_id=1602164488]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.626112, -0.11701147)
+[node name="Head" type="Marker3D" parent="." unique_id=1602164488]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4970552, -0.0072481483)
 
-[node name="Camera3D" type="Camera3D" parent="CameraPivot" unique_id=1372154845]
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1372154845]
 
-[node name="InteractRay" type="RayCast3D" parent="CameraPivot/Camera3D" unique_id=2076853309]
+[node name="InteractRay" type="RayCast3D" parent="Head/Camera3D" unique_id=2076853309]
 target_position = Vector3(0, 0, -2.5)
 
 [node name="GroundRay" type="RayCast3D" parent="." unique_id=245364218]

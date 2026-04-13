@@ -22,9 +22,10 @@ const FOV_CHANGE = 1
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = 9.81
 
-@onready var head = $CameraPivot
-@onready var camera = $CameraPivot/Camera3D
-@onready var body = $CollisionShape3D
+@onready var head = $Head
+@onready var camera = $Head/Camera3D
+@onready var hitbox = $CollisionShape3D
+@onready var body = $Body
 
 @export_group("Holding Objects")
 @export var throwForce = 7.5
@@ -34,7 +35,7 @@ var gravity = 9.81
 @export var dropBelowPlayer = false
 @export var groundRay: RayCast3D # Only needed if dropBelowPlayer is true
 
-@onready var interactRay = $CameraPivot/Camera3D/InteractRay
+@onready var interactRay = $Head/Camera3D/InteractRay
 var heldObject: RigidBody3D
 
 func _ready():
@@ -45,6 +46,7 @@ func _ready():
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		head.rotate_y(-event.relative.x * SENSITIVITY)
+		body.rotate_y(-event.relative.x * SENSITIVITY)
 		camera.rotate_x(-event.relative.y * SENSITIVITY)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-40), deg_to_rad(60))
 
@@ -90,9 +92,9 @@ func _crouch():
 	if Input.is_action_just_pressed("crouch"):
 		crouching = !crouching
 		if crouching:
-			body.shape.height = crouch_height
+			hitbox.shape.height = crouch_height
 		else:
-			body.shape.height = stand_height
+			hitbox.shape.height = stand_height
 
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO
@@ -100,9 +102,9 @@ func _headbob(time) -> Vector3:
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
 	return pos
 	
-func _set_held_object(body):
-	if body is RigidBody3D:
-		heldObject = body
+func _set_held_object(hitbox):
+	if hitbox is RigidBody3D:
+		heldObject = hitbox
 	
 func _drop_held_object():
 	heldObject = null
