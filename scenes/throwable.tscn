@@ -2,26 +2,25 @@
 
 [ext_resource type="Script" uid="uid://bxgl31vylwr24" path="res://scenes/throwable.gd" id="1_ef5ia"]
 [ext_resource type="AudioStream" uid="uid://cfphwykkjd3li" path="res://assets/sfx/mixkit-wood-hard-hit-2182.mp3" id="2_ef5ia"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_pw63i"]
-size = Vector3(0.5, 0.5, 0.5)
+[ext_resource type="PackedScene" uid="uid://4bc2r0ypjuan" path="res://assets/3d-models/Bottle.glb" id="3_nputv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pw63i"]
-size = Vector3(0.5, 0.5, 0.5)
+size = Vector3(0.3, 0.7, 0.3)
 
 [node name="Throwable" type="RigidBody3D" unique_id=520692916 groups=["Throwable"]]
 angular_damp = 0.5
 script = ExtResource("1_ef5ia")
 max_distance = 7.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1741095007]
-mesh = SubResource("BoxMesh_pw63i")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=235793674]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.122083426, 0)
 shape = SubResource("BoxShape3D_pw63i")
 
 [node name="SFX" type="AudioStreamPlayer3D" parent="." unique_id=25919708]
 stream = ExtResource("2_ef5ia")
+
+[node name="Root Scene" parent="." unique_id=2025798807 instance=ExtResource("3_nputv")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.26754835, 0)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="finished" from="SFX" to="." method="_on_sfx_finished"]

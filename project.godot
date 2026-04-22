@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 PlayerManager="*uid://dvadtwiyn0enr"
 
+[display]
+
+window/size/mode=3
+
 [global_group]
 
 Throwable=""

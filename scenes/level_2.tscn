@@ -694,7 +694,6 @@ shape = SubResource("ConcavePolygonShape3D_qku3a")
 
 [node name="ceiling" type="StaticBody3D" parent="." unique_id=765101059]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8405666, 0)
-visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ceiling" unique_id=1186326694]
 mesh = SubResource("PlaneMesh_rur20")
