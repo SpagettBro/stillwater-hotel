@@ -1,10 +1,10 @@
 extends CharacterBody3D
 
 var speed
-const WALK_SPEED = 5.0
-const SPRINT_SPEED = 8.0
+@export var WALK_SPEED = 3.5
+@export var SPRINT_SPEED = 6
 const JUMP_VELOCITY = 4.8
-const SENSITIVITY = 0.004
+@export var SENSITIVITY = 0.004
 
 const crouch_height = 0.7
 const stand_height = 1.4

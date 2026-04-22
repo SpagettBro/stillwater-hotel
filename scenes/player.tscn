@@ -37,7 +37,8 @@ transform = Transform3D(-0.58848554, 0, 0.11698223, 0, 0.6, 0, -0.11698223, 0, -
 [node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D/flashlight" unique_id=234972755]
 transform = Transform3D(-1.6666665, 0, 2.5165966e-07, 0, 1.6666665, 0, -2.5165966e-07, 0, -1.6666665, 0.047467373, 0.72626424, -0.09544375)
 light_color = Color(0.89, 0.8247333, 0.8188, 1)
-spot_range = 10.0
+light_energy = 1.5
+spot_range = 12.0
 spot_angle_attenuation = 3.0
 
 [node name="GroundRay" type="RayCast3D" parent="." unique_id=245364218]

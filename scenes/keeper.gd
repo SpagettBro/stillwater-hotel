@@ -8,8 +8,8 @@ extends CharacterBody3D
 # CONFIG
 # --------------------
 @export var patrol_points: Array[Node3D] = []
-@export var speed_walk: float = 1.7
-@export var speed_run: float = 3.0
+@export var speed_walk: float = 2.5
+@export var speed_run: float = 4.5
 @export var attack_range: float = 2.0
 @export var investigate_wait_time: float = 4.0
 @export var patrol_wait_time: float = 3.0
