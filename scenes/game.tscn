@@ -1,0 +1,995 @@
+[gd_scene format=3 uid="uid://elst0xn32iil"]
+
+[ext_resource type="ArrayMesh" uid="uid://c3nf84772j6m" path="res://777.obj" id="1_80nbo"]
+[ext_resource type="ArrayMesh" uid="uid://c8ijvsk83272i" path="res://Full_Size_Bed_with_White_Sheets_Black_V1.obj" id="1_fc0e3"]
+[ext_resource type="ArrayMesh" uid="uid://cl6j2v5xeo1xh" path="res://couch.obj" id="2_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://brrpbtqxwwe2x" path="res://chester.FBX" id="3_7jktm"]
+[ext_resource type="Texture2D" uid="uid://b2a2yty5yx5bm" path="res://elevator-door.jpeg" id="4_ryrav"]
+[ext_resource type="ArrayMesh" uid="uid://djsc2gkfjeeyy" path="res://elevator-door.obj" id="6_ryrav"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_feb5d"]
+data = PackedVector3Array(-50, -0.0005, 50, -50, -0.0005, -50, -50, 0.0005, -50, 50, -0.0005, -50, -50, -0.0005, -50, -50, -0.0005, 50, -50, 0.0005, -50, -50, -0.0005, -50, 50, -0.0005, -50, -50, 0.0005, -50, -50, 0.0005, 50, -50, -0.0005, 50, -50, -0.0005, 50, -50, 0.0005, 50, 50, 0.0005, 50, 50, 0.0005, 50, -50, 0.0005, 50, -50, 0.0005, -50, -50, -0.0005, 50, 50, -0.0005, 50, 50, -0.0005, -50, 50, 0.0005, 50, 50, -0.0005, 50, -50, -0.0005, 50, 50, -0.0005, -50, 50, -0.0005, 50, 50, 0.0005, 50, 50, -0.0005, -50, 50, 0.0005, -50, -50, 0.0005, -50, -50, 0.0005, -50, 50, 0.0005, -50, 50, 0.0005, 50, 50, 0.0005, 50, 50, 0.0005, -50, 50, -0.0005, -50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eow3j"]
+albedo_texture = ExtResource("4_ryrav")
+
+[node name="Node3D" type="Node3D" unique_id=1351630373]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=206154618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.041076183, 0.4995019, 0.004026413)
+
+[node name="Lobby Floor43" type="CSGBox3D" parent="StaticBody3D" unique_id=560519703]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14691001, 0.0032773316, 30.265955)
+size = Vector3(30, 0.001, 41.443542)
+
+[node name="Lobby Floor44" type="CSGBox3D" parent="StaticBody3D" unique_id=331678844]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.179493, 0, 29.514172)
+size = Vector3(30, 0.001, 40)
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=61893269]
+shape = SubResource("ConcavePolygonShape3D_feb5d")
+
+[node name="FullSizeBedWithWhiteSheetsBlackV1" type="MeshInstance3D" parent="StaticBody3D" unique_id=756765149]
+transform = Transform3D(1.3113416e-09, 0.01, -1.0425061e-17, 1.192488e-10, -5.2125303e-18, 0.01, 0.01, -1.3113416e-09, -1.192488e-10, -2.137168, 0.83692026, 70.12653)
+mesh = ExtResource("1_fc0e3")
+
+[node name="FullSizeBedWithWhiteSheetsBlackV5" type="MeshInstance3D" parent="StaticBody3D" unique_id=2098580680]
+transform = Transform3D(1.3113416e-09, 0.01, -1.0425061e-17, 1.192488e-10, -5.2125303e-18, 0.01, 0.01, -1.3113416e-09, -1.192488e-10, -35.297977, 0.83692026, 70.12653)
+mesh = ExtResource("1_fc0e3")
+
+[node name="FullSizeBedWithWhiteSheetsBlackV6" type="MeshInstance3D" parent="StaticBody3D" unique_id=123885567]
+transform = Transform3D(1.3113416e-09, 0.01, -1.0425061e-17, 1.192488e-10, -5.2125303e-18, 0.01, 0.01, -1.3113416e-09, -1.192488e-10, -35.297977, 0.83692026, 59.188362)
+mesh = ExtResource("1_fc0e3")
+
+[node name="FullSizeBedWithWhiteSheetsBlackV7" type="MeshInstance3D" parent="StaticBody3D" unique_id=1087510464]
+transform = Transform3D(-4.3711387e-10, -0.01, 4.3711387e-10, 3.821371e-17, 4.3711387e-10, 0.01, -0.01, 4.3711387e-10, 1.9106855e-17, -28.666298, 0.83692026, 59.188362)
+mesh = ExtResource("1_fc0e3")
+
+[node name="FullSizeBedWithWhiteSheetsBlackV8" type="MeshInstance3D" parent="StaticBody3D" unique_id=891066809]
+transform = Transform3D(-4.3711387e-10, -0.01, 4.3711387e-10, 3.821371e-17, 4.3711387e-10, 0.01, -0.01, 4.3711387e-10, 1.9106855e-17, -28.666298, 0.83692026, 63.437202)
+mesh = ExtResource("1_fc0e3")
+
+[node name="FullSizeBedWithWhiteSheetsBlackV2" type="MeshInstance3D" parent="StaticBody3D" unique_id=1678007480]
+transform = Transform3D(1.3113416e-09, 0.01, -1.0425061e-17, 1.192488e-10, -5.2125303e-18, 0.01, 0.01, -1.3113416e-09, -1.192488e-10, -2.1529727, 0.83692026, 59.081055)
+mesh = ExtResource("1_fc0e3")
+
+[node name="FullSizeBedWithWhiteSheetsBlackV3" type="MeshInstance3D" parent="StaticBody3D" unique_id=2030326643]
+transform = Transform3D(-4.3711387e-10, -0.01, 4.3711387e-10, 3.821371e-17, 4.3711387e-10, 0.01, -0.01, 4.3711387e-10, 1.9106855e-17, 4.595113, 0.83692026, 59.081055)
+mesh = ExtResource("1_fc0e3")
+
+[node name="FullSizeBedWithWhiteSheetsBlackV4" type="MeshInstance3D" parent="StaticBody3D" unique_id=1485225242]
+transform = Transform3D(-4.3711387e-10, -0.01, 4.3711387e-10, 3.821371e-17, 4.3711387e-10, 0.01, -0.01, 4.3711387e-10, 1.9106855e-17, 4.595113, 0.83692026, 63.546608)
+mesh = ExtResource("1_fc0e3")
+
+[node name="Lobby Floor36" type="CSGBox3D" parent="." unique_id=50129091]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2177124, 3.6219177, 29.543518)
+size = Vector3(33.603394, 1, 40.912964)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor36" unique_id=158452375]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor36" unique_id=1229884265]
+
+[node name="Lobby Floor4" type="CSGBox3D" parent="." unique_id=1436253276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.574219, 2.00038, 29.526918)
+size = Vector3(2, 3, 40)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor4" unique_id=1458736819]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor4" unique_id=1019826597]
+
+[node name="Lobby Floor23" type="CSGBox3D" parent="." unique_id=25134898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.854279, 2.00038, 29.526918)
+size = Vector3(2, 3, 40)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor23" unique_id=526273645]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor23" unique_id=1039210601]
+
+[node name="Lobby Floor5" type="CSGBox3D" parent="." unique_id=2025264136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.451688, 2.026447, 50.178986)
+size = Vector3(16.34314, 3, 1.439)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor5" unique_id=912891031]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor5" unique_id=436762589]
+
+[node name="Lobby Floor25" type="CSGBox3D" parent="." unique_id=1942137103]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.422455, 2.026447, 8.830227)
+size = Vector3(16.538818, 3, 1.439)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor25" unique_id=672000737]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor25" unique_id=407266267]
+
+[node name="Lobby Floor6" type="CSGBox3D" parent="." unique_id=1344676578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.535248, 2.049172, 51.749798)
+size = Vector3(11.679199, 3, 4.5622735)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor6" unique_id=1687507527]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor6" unique_id=2145834040]
+
+[node name="Lobby Floor43" type="CSGBox3D" parent="." unique_id=767878867]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.691437, 2.049172, 55.78382)
+size = Vector3(5.3668213, 3, 11.203378)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor43" unique_id=1608285773]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor43" unique_id=7746136]
+
+[node name="Lobby Floor41" type="CSGBox3D" parent="." unique_id=1938051227]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.454045, 2.049172, 61.270954)
+size = Vector3(11.837158, 3, 1.439)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor41" unique_id=1579414954]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor41" unique_id=1583018844]
+
+[node name="Lobby Floor51" type="CSGBox3D" parent="." unique_id=1058644095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.392609, 2.049172, 67.54036)
+size = Vector3(3.9644775, 3, 11.203378)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor51" unique_id=1473419371]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor51" unique_id=1847574844]
+
+[node name="Lobby Floor52" type="CSGBox3D" parent="." unique_id=236928004]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.454045, 2.049172, 72.055214)
+size = Vector3(11.837158, 3, 3.3835626)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor52" unique_id=843020769]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor52" unique_id=2125388522]
+
+[node name="Lobby Floor47" type="CSGBox3D" parent="." unique_id=717408946]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.355936, 2.0595903, 61.876106)
+size = Vector3(14.554016, 3, 2.6493096)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor47" unique_id=113656369]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor47" unique_id=885875074]
+
+[node name="Lobby Floor48" type="CSGBox3D" parent="." unique_id=1467755385]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.113568, 2.036037, 55.758377)
+size = Vector3(5.111084, 3, 11.203378)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor48" unique_id=66480234]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor48" unique_id=1204315660]
+
+[node name="Lobby Floor49" type="CSGBox3D" parent="." unique_id=1493635664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.320739, 2.049172, 72.48367)
+size = Vector3(14.62561, 3, 1.439)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor49" unique_id=458933671]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor49" unique_id=1874513342]
+
+[node name="Lobby Floor50" type="CSGBox3D" parent="." unique_id=1535378242]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.441937, 2.049172, 66.996544)
+size = Vector3(6.4676514, 3, 11.203378)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor50" unique_id=145530357]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor50" unique_id=711368553]
+
+[node name="Lobby Floor24" type="CSGBox3D" parent="." unique_id=69363222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5052185, 2.049172, 8.847047)
+size = Vector3(13.739258, 3, 1.439)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor24" unique_id=813116161]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor24" unique_id=1979713609]
+
+[node name="Lobby Floor7" type="CSGBox3D" parent="." unique_id=953585264]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1668396, 2.7288508, 50.18816)
+size = Vector3(2.949707, 1.3398438, 1.439)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor7" unique_id=125283043]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor7" unique_id=1143695256]
+
+[node name="Lobby Floor26" type="CSGBox3D" parent="." unique_id=258127597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6972351, 2.7288508, 8.614693)
+size = Vector3(2.010498, 1.3398438, 1.8880711)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor26" unique_id=1976863623]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor26" unique_id=375394506]
+
+[node name="Lobby Floor53" type="CSGBox3D" parent="." unique_id=390371679]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5329304, 2.2350693, 73.44931)
+size = Vector3(0.001, 3, 14.486742)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor53" unique_id=249513439]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor53" unique_id=994029499]
+
+[node name="Lobby Floor40" type="CSGBox3D" parent="." unique_id=356387235]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5329304, 2.2350693, 58.98389)
+size = Vector3(0.001, 3, 3.1581478)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor40" unique_id=174238976]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor40" unique_id=1896848963]
+
+[node name="Lobby Floor54" type="CSGBox3D" parent="." unique_id=1306112772]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5329304, 2.2350693, 63.538048)
+size = Vector3(0.001, 3, 3.1581478)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor54" unique_id=1263849574]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor54" unique_id=1556110483]
+
+[node name="Lobby Floor34" type="CSGBox3D" parent="." unique_id=332024211]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5329304, 1.9529037, 52.91941)
+size = Vector3(0.001, 2.435669, 6.901411)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor34" unique_id=126371509]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor34" unique_id=814112887]
+
+[node name="Lobby Floor35" type="CSGBox3D" parent="." unique_id=381950225]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5329304, 2.7762375, 56.907238)
+size = Vector3(0.001, 0.78900146, 1.099143)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor35" unique_id=228242097]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor35" unique_id=1915143152]
+
+[node name="Lobby Floor55" type="CSGBox3D" parent="." unique_id=545599767]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5329304, 2.7762375, 65.64004)
+size = Vector3(0.001, 0.78900146, 1.099143)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor55" unique_id=1005906299]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor55" unique_id=740008463]
+
+[node name="Lobby Floor60" type="CSGBox3D" parent="." unique_id=1708840991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0102272, 2.2350693, 73.60901)
+size = Vector3(0.001, 3, 14.912866)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor60" unique_id=759632545]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor60" unique_id=590961464]
+
+[node name="Lobby Floor57" type="CSGBox3D" parent="." unique_id=1713816104]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5329304, 2.2350693, 63.538048)
+size = Vector3(0.001, 3, 3.1581478)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor57" unique_id=600123596]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor57" unique_id=1923346849]
+
+[node name="Lobby Floor58" type="CSGBox3D" parent="." unique_id=704602843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5329304, 2.7762375, 65.74556)
+size = Vector3(0.001, 0.78900146, 1.3101916)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor58" unique_id=826418942]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor58" unique_id=1819721471]
+
+[node name="Lobby Floor18" type="CSGBox3D" parent="." unique_id=1507574663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5849919, 3.1706104, 65.14081)
+size = Vector3(4.74998, 0.001, 28.867188)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor18" unique_id=358455806]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor18" unique_id=1566747297]
+
+[node name="Lobby Floor22" type="CSGBox3D" parent="." unique_id=383597278]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6991167, 3.1706104, 61.980408)
+size = Vector3(14.074301, 0.001, 22.546387)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor22" unique_id=1387940987]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor22" unique_id=1672320889]
+
+[node name="Lobby Floor89" type="CSGBox3D" parent="." unique_id=912675120]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.004939, 3.1706104, 61.980408)
+size = Vector3(14.074301, 0.001, 22.546387)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor89" unique_id=2003668910]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor89" unique_id=385567680]
+
+[node name="Lobby Floor21" type="CSGBox3D" parent="." unique_id=555684193]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.901747, 3.1706104, 64.03656)
+size = Vector3(4.74998, 0.001, 31.075684)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor21" unique_id=186430602]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor21" unique_id=150196368]
+
+[node name="Lobby Floor90" type="CSGBox3D" parent="." unique_id=2085107507]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.185852, 3.1706104, 61.980408)
+size = Vector3(14.074301, 0.001, 22.546387)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor90" unique_id=1592998170]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor90" unique_id=671274477]
+
+[node name="Lobby Floor91" type="CSGBox3D" parent="." unique_id=792279009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.481798, 3.1706104, 61.980408)
+size = Vector3(14.074301, 0.001, 22.546387)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor91" unique_id=1830134255]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor91" unique_id=1336873043]
+
+[node name="Hallway Floor" type="CSGBox3D" parent="." unique_id=830580301]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.638669, 0.31763983, 65.98558)
+size = Vector3(30, 1, 30)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway Floor" unique_id=1787560065]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Hallway Floor" unique_id=136201051]
+
+[node name="Hallway Floor3" type="CSGBox3D" parent="." unique_id=703816910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.638669, 0.27320623, 50.849857)
+size = Vector3(30, 0.9111328, 0.2734492)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway Floor3" unique_id=655032622]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Hallway Floor3" unique_id=495272112]
+
+[node name="Hallway Floor4" type="CSGBox3D" parent="." unique_id=708014683]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.638669, 0.20924139, 50.58593)
+size = Vector3(30, 0.7832031, 0.2734492)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway Floor4" unique_id=1352967279]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Hallway Floor4" unique_id=1589273379]
+
+[node name="Hallway Floor5" type="CSGBox3D" parent="." unique_id=172478720]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.493526, 0.31763983, 94.89329)
+size = Vector3(39.050537, 1, 30)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway Floor5" unique_id=1971985106]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Hallway Floor5" unique_id=1177652577]
+
+[node name="Hallway Floor7" type="CSGBox3D" parent="." unique_id=1478548338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.06452, 0.31763983, 84.94204)
+size = Vector3(10, 1, 5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway Floor7" unique_id=1350018193]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Hallway Floor7" unique_id=1465799590]
+
+[node name="Hallway Floor8" type="CSGBox3D" parent="." unique_id=1077537762]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.06452, 0.31763983, 105.209114)
+size = Vector3(10, 1, 5.095703)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway Floor8" unique_id=1631164659]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Hallway Floor8" unique_id=1968147083]
+
+[node name="Hallway Floor11" type="CSGBox3D" parent="." unique_id=2024652990]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.601612, 0.31763983, 95.12025)
+size = Vector3(3.0761836, 1, 25.273438)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway Floor11" unique_id=1829795165]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Hallway Floor11" unique_id=542322840]
+
+[node name="Hallway Floor6" type="CSGBox3D" parent="." unique_id=1095736478]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.57806, 3.2106445, 94.83129)
+size = Vector3(38.800537, 1, 30)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway Floor6" unique_id=1572033347]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Hallway Floor6" unique_id=1104848786]
+
+[node name="Hallway Floor9" type="CSGBox3D" parent="." unique_id=1578158969]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.507626, 3.2106445, 94.83129)
+size = Vector3(38.659668, 1, 30)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway Floor9" unique_id=1990193243]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Hallway Floor9" unique_id=1728329652]
+
+[node name="Lobby Floor45" type="CSGBox3D" parent="." unique_id=2053418146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.068928, 1.9529037, 52.931435)
+size = Vector3(0.001, 2.435669, 6.925459)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor45" unique_id=391082331]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor45" unique_id=488074009]
+
+[node name="Lobby Floor59" type="CSGBox3D" parent="." unique_id=991449054]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.068928, 1.9529037, 61.22151)
+size = Vector3(0.001, 2.435669, 7.6641064)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor59" unique_id=1936491141]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor59" unique_id=881016870]
+
+[node name="Lobby Floor46" type="CSGBox3D" parent="." unique_id=1155297662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.068928, 2.7762375, 56.907238)
+size = Vector3(0.001, 0.78900146, 1.099143)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor46" unique_id=1266384941]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor46" unique_id=1026812234]
+
+[node name="Lobby Floor61" type="CSGBox3D" parent="." unique_id=1364476323]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0117935, 2.7752457, 64.55703)
+size = Vector3(0.001, 0.7909851, 3.3170276)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor61" unique_id=732336138]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor61" unique_id=367292309]
+
+[node name="783" type="MeshInstance3D" parent="." unique_id=291713817]
+transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 2.1974018, 0.51876354, 9.384616)
+mesh = ExtResource("1_80nbo")
+
+[node name="Couch" type="MeshInstance3D" parent="." unique_id=103834628]
+transform = Transform3D(-1.3113416e-10, 0, -0.003, 0, 0.003, 0, 0.003, 0, -1.3113416e-10, 11.9263, -0.23525143, 16.061134)
+mesh = ExtResource("2_fc0e3")
+
+[node name="Couch2" type="MeshInstance3D" parent="." unique_id=1965217864]
+transform = Transform3D(-4.371139e-11, 0, 0.001, 0, 0.001, 0, -0.001, 0, -4.371139e-11, 2.1665192, 0.53709096, 11.625172)
+mesh = ExtResource("2_fc0e3")
+
+[node name="chester" parent="." unique_id=866287789 instance=ExtResource("3_7jktm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.014198, 0.5111351, 11.275427)
+
+[node name="chester2" parent="." unique_id=823320383 instance=ExtResource("3_7jktm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.7942495, 0.75602865, 12.216112)
+
+[node name="Lobby Floor31" type="CSGBox3D" parent="." unique_id=688325054]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.30014, 2.2489085, 81.051094)
+size = Vector3(29.812134, 3, 0.001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor31" unique_id=76158713]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor31" unique_id=1284666571]
+
+[node name="Lobby Floor32" type="CSGBox3D" parent="." unique_id=1083001440]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9942322, 2.2716334, 81.051094)
+size = Vector3(2.7633057, 3, 0.001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor32" unique_id=1961297216]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor32" unique_id=377953695]
+
+[node name="Lobby Floor33" type="CSGBox3D" parent="." unique_id=1161611578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1007996, 2.9513123, 81.03726)
+size = Vector3(2.9954834, 1.3398438, 0.001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor33" unique_id=1763824340]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor33" unique_id=224757042]
+
+[node name="Lobby Floor39" type="CSGBox3D" parent="." unique_id=1446093328]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.96178, 3.6219177, 29.543518)
+size = Vector3(33.603394, 1, 40.912964)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor39" unique_id=169478023]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor39" unique_id=834574550]
+
+[node name="Lobby Floor8" type="CSGBox3D" parent="." unique_id=1586648516]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.75371, 2.00038, 29.526918)
+size = Vector3(2, 3, 40)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor8" unique_id=649342479]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor8" unique_id=895088798]
+
+[node name="Lobby Floor27" type="CSGBox3D" parent="." unique_id=2124217005]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.325214, 2.00038, 29.526918)
+size = Vector3(2, 3, 40)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor27" unique_id=384942928]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor27" unique_id=866389585]
+
+[node name="Lobby Floor9" type="CSGBox3D" parent="." unique_id=2089320725]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.903736, 2.026447, 49.820625)
+size = Vector3(15.935242, 3, 0.7039273)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor9" unique_id=539914487]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor9" unique_id=1881279213]
+
+[node name="Lobby Floor28" type="CSGBox3D" parent="." unique_id=1759455304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.12746, 1.9541814, 8.830227)
+size = Vector3(31.487793, 3.1445313, 1.439)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor28" unique_id=700302841]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor28" unique_id=534881623]
+
+[node name="Lobby Floor10" type="CSGBox3D" parent="." unique_id=2079855420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.507526, 2.049172, 49.798225)
+size = Vector3(13.405762, 3, 0.6591275)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor10" unique_id=1774934693]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor10" unique_id=575334347]
+
+[node name="Lobby Floor12" type="CSGBox3D" parent="." unique_id=1233253941]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.507526, 2.049172, 49.798225)
+size = Vector3(13.405762, 3, 0.6591275)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor12" unique_id=821570751]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor12" unique_id=1355967318]
+
+[node name="Lobby Floor13" type="CSGBox3D" parent="." unique_id=455601991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.767414, 2.049172, 52.044216)
+size = Vector3(11.925537, 3, 5.15111)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor13" unique_id=549525966]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor13" unique_id=29865255]
+
+[node name="Lobby Floor62" type="CSGBox3D" parent="." unique_id=517195525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.03786, 2.049172, 55.78382)
+size = Vector3(6.4664307, 3, 11.203378)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor62" unique_id=1734483976]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor62" unique_id=869499050]
+
+[node name="Lobby Floor63" type="CSGBox3D" parent="." unique_id=1020667520]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.725449, 2.049172, 61.270954)
+size = Vector3(11.837158, 3, 1.439)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor63" unique_id=1261490686]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor63" unique_id=1677296407]
+
+[node name="Lobby Floor64" type="CSGBox3D" parent="." unique_id=566252330]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.345234, 2.049172, 67.54036)
+size = Vector3(3.0811768, 3, 11.203378)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor64" unique_id=434763300]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor64" unique_id=959776804]
+
+[node name="Lobby Floor65" type="CSGBox3D" parent="." unique_id=1650571893]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.725449, 2.049172, 71.3101)
+size = Vector3(11.837158, 3, 4.873797)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor65" unique_id=520906077]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor65" unique_id=257146507]
+
+[node name="Lobby Floor66" type="CSGBox3D" parent="." unique_id=2104370050]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.53603, 2.049172, 62.09083)
+size = Vector3(14.554016, 3, 3.078753)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor66" unique_id=1628637700]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor66" unique_id=829633195]
+
+[node name="Lobby Floor67" type="CSGBox3D" parent="." unique_id=1286639644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.23169, 2.049172, 55.78382)
+size = Vector3(9.247131, 3, 11.203378)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor67" unique_id=449103147]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor67" unique_id=1652423087]
+
+[node name="Lobby Floor68" type="CSGBox3D" parent="." unique_id=2078423521]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.500233, 2.049172, 72.48367)
+size = Vector3(14.62561, 3, 1.439)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor68" unique_id=616188902]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor68" unique_id=417849477]
+
+[node name="Lobby Floor69" type="CSGBox3D" parent="." unique_id=1505383255]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.53781, 2.049172, 66.996544)
+size = Vector3(10.634888, 3, 11.203378)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor69" unique_id=1082075327]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor69" unique_id=863227438]
+
+[node name="Lobby Floor29" type="CSGBox3D" parent="." unique_id=1315448337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.674274, 2.049172, 8.847047)
+size = Vector3(13.739258, 3, 1.439)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor29" unique_id=89586168]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor29" unique_id=1359584159]
+
+[node name="Lobby Floor11" type="CSGBox3D" parent="." unique_id=891936318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.872322, 2.733021, 49.818428)
+size = Vector3(2.3563232, 1.3398438, 0.6262383)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor11" unique_id=2120129157]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor11" unique_id=76831253]
+
+[node name="Lobby Floor30" type="CSGBox3D" parent="." unique_id=1305632139]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.482258, 2.7288508, 8.614693)
+size = Vector3(2.010498, 1.3398438, 1.8880711)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor30" unique_id=1036192203]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor30" unique_id=964500142]
+
+[node name="Lobby Floor70" type="CSGBox3D" parent="." unique_id=33364989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.646564, 2.2350693, 73.41513)
+size = Vector3(0.001, 3, 14.555101)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor70" unique_id=1091999749]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor70" unique_id=1063465278]
+
+[node name="Lobby Floor71" type="CSGBox3D" parent="." unique_id=1557498596]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.646564, 2.2350693, 58.98389)
+size = Vector3(0.001, 3, 3.1581478)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor71" unique_id=1564662956]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor71" unique_id=1478590173]
+
+[node name="Lobby Floor72" type="CSGBox3D" parent="." unique_id=675402033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.646564, 2.2350693, 63.538048)
+size = Vector3(0.001, 3, 3.1581478)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor72" unique_id=1097002533]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor72" unique_id=1187360867]
+
+[node name="Lobby Floor73" type="CSGBox3D" parent="." unique_id=1810630857]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.646564, 1.9529037, 52.95127)
+size = Vector3(0.001, 2.435669, 6.9651318)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor73" unique_id=1590682199]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor73" unique_id=341490550]
+
+[node name="Lobby Floor74" type="CSGBox3D" parent="." unique_id=2076393262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.646564, 2.7762375, 56.907238)
+size = Vector3(0.001, 0.78900146, 1.099143)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor74" unique_id=386112243]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor74" unique_id=1586673050]
+
+[node name="Lobby Floor75" type="CSGBox3D" parent="." unique_id=517597416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.646564, 2.7762375, 65.64004)
+size = Vector3(0.001, 0.78900146, 1.099143)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor75" unique_id=412813786]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor75" unique_id=738778502]
+
+[node name="Lobby Floor76" type="CSGBox3D" parent="." unique_id=1251798310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.646564, 2.2350693, 73.439545)
+size = Vector3(0.001, 3, 14.506273)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor76" unique_id=87397014]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor76" unique_id=1266479252]
+
+[node name="Lobby Floor77" type="CSGBox3D" parent="." unique_id=1439226350]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.18972, 2.2350693, 73.461655)
+size = Vector3(0.001, 3, 15.207567)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor77" unique_id=949736035]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor77" unique_id=253017332]
+
+[node name="Lobby Floor78" type="CSGBox3D" parent="." unique_id=1342480575]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.646564, 2.2350693, 63.538048)
+size = Vector3(0.001, 3, 3.1581478)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor78" unique_id=980960969]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor78" unique_id=1373343357]
+
+[node name="Lobby Floor79" type="CSGBox3D" parent="." unique_id=1138974018]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.646564, 2.7762375, 65.64004)
+size = Vector3(0.001, 0.78900146, 1.099143)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor79" unique_id=629261574]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor79" unique_id=1236835868]
+
+[node name="Hallway Floor10" type="CSGBox3D" parent="." unique_id=759860446]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.884293, 0.23011112, 65.231705)
+size = Vector3(30, 1, 31.515625)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway Floor10" unique_id=611214286]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Hallway Floor10" unique_id=1918639597]
+
+[node name="Hallway Floor13" type="CSGBox3D" parent="." unique_id=190980152]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.927307, 0.16327763, 49.587296)
+size = Vector3(1.4634094, 0.866333, 0.5637207)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway Floor13" unique_id=375215088]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Hallway Floor13" unique_id=274159836]
+
+[node name="Hallway Floor12" type="CSGBox3D" parent="." unique_id=1527161877]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.171432, 0.25416327, 49.470455)
+size = Vector3(16.706543, 0.8730469, 0.001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hallway Floor12" unique_id=1288360111]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Hallway Floor12" unique_id=1497008596]
+
+[node name="Lobby Floor80" type="CSGBox3D" parent="." unique_id=576028605]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.24842, 1.9529037, 52.932716)
+size = Vector3(0.001, 2.435669, 6.9280224)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor80" unique_id=1297536717]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor80" unique_id=2073855581]
+
+[node name="Lobby Floor81" type="CSGBox3D" parent="." unique_id=1190414158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.24842, 1.9529037, 61.13596)
+size = Vector3(0.001, 2.435669, 7.493186)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor81" unique_id=649865452]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor81" unique_id=158339527]
+
+[node name="Lobby Floor82" type="CSGBox3D" parent="." unique_id=410013221]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.24842, 2.7762375, 56.907238)
+size = Vector3(0.001, 0.78900146, 1.099143)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor82" unique_id=1266571721]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor82" unique_id=1335036375]
+
+[node name="Lobby Floor83" type="CSGBox3D" parent="." unique_id=1057480715]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.191288, 2.7752457, 64.55703)
+size = Vector3(0.001, 0.7909851, 3.3170276)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor83" unique_id=1913793841]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor83" unique_id=1433394282]
+
+[node name="Couch3" type="MeshInstance3D" parent="." unique_id=1230059062]
+transform = Transform3D(-1.3113416e-10, 0, -0.003, 0, 0.003, 0, 0.003, 0, -1.3113416e-10, -21.253193, -0.23525143, 16.061134)
+mesh = ExtResource("2_fc0e3")
+
+[node name="Couch4" type="MeshInstance3D" parent="." unique_id=888304959]
+transform = Transform3D(-4.371139e-11, 0, 0.001, 0, 0.001, 0, -0.001, 0, -4.371139e-11, -31.012974, 0.53709096, 11.625172)
+mesh = ExtResource("2_fc0e3")
+
+[node name="chester3" parent="." unique_id=58001319 instance=ExtResource("3_7jktm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -25.165295, 0.5111351, 11.275427)
+
+[node name="chester4" parent="." unique_id=185365119 instance=ExtResource("3_7jktm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -35.973743, 0.75602865, 12.216112)
+
+[node name="Lobby Floor94" type="CSGBox3D" parent="." unique_id=1656195240]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.98512, 2.2489085, 82.843254)
+size = Vector3(0.001, 3, 3.53154)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor94" unique_id=1727598270]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor94" unique_id=937234760]
+
+[node name="Lobby Floor100" type="CSGBox3D" parent="." unique_id=469978800]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.98512, 2.2489085, 82.706604)
+size = Vector3(0.001, 3, 0.6123276)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor100" unique_id=1703989827]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor100" unique_id=123910528]
+
+[node name="Lobby Floor99" type="CSGBox3D" parent="." unique_id=2105655816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.98512, 2.2489085, 82.843254)
+size = Vector3(0.001, 3, 3.53154)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor99" unique_id=1826250586]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor99" unique_id=1530726391]
+
+[node name="Lobby Floor101" type="CSGBox3D" parent="." unique_id=1920831693]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.91846, 2.2489085, 82.77325)
+size = Vector3(7.8676877, 3, 0.2843132)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor101" unique_id=118815580]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor101" unique_id=1454827059]
+
+[node name="Lobby Floor104" type="CSGBox3D" parent="." unique_id=6660145]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.546997, 2.2489085, 82.77325)
+size = Vector3(11.124762, 3, 0.2843132)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor104" unique_id=996906712]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor104" unique_id=299621924]
+
+[node name="Lobby Floor105" type="CSGBox3D" parent="." unique_id=1250898667]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.931458, 2.2489085, 95.20435)
+size = Vector3(0.35583782, 3, 25.146519)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor105" unique_id=1592129561]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor105" unique_id=1346360010]
+
+[node name="Lobby Floor106" type="CSGBox3D" parent="." unique_id=2026011257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.543915, 2.2489085, 107.777115)
+size = Vector3(11.130922, 3, 0.001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor106" unique_id=1849202747]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor106" unique_id=950151424]
+
+[node name="Lobby Floor107" type="CSGBox3D" parent="." unique_id=502979990]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.027298, 2.2489085, 102.76728)
+size = Vector3(8.097688, 3, 0.001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor107" unique_id=44524678]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor107" unique_id=1261376908]
+
+[node name="Lobby Floor103" type="CSGBox3D" parent="." unique_id=2112532272]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.91846, 3.6981883, 84.95992)
+size = Vector3(7.8676877, 0.10144043, 4.6576595)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor103" unique_id=1791184674]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor103" unique_id=211250754]
+
+[node name="Lobby Floor109" type="CSGBox3D" parent="." unique_id=2067205003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.91846, 3.6981883, 104.976006)
+size = Vector3(7.8676877, 0.10144043, 5.487521)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor109" unique_id=738376547]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor109" unique_id=183457910]
+
+[node name="Lobby Floor110" type="CSGBox3D" parent="." unique_id=96805532]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.960762, 3.6981883, 95.29248)
+size = Vector3(3.6900663, 0.10144043, 25.189083)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor110" unique_id=1962194102]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor110" unique_id=1378352434]
+
+[node name="Lobby Floor102" type="CSGBox3D" parent="." unique_id=1753745084]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.996704, 2.2489085, 87.17271)
+size = Vector3(8.024176, 3, 0.2843132)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor102" unique_id=359218747]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor102" unique_id=1385743593]
+
+[node name="Lobby Floor108" type="CSGBox3D" parent="." unique_id=1131579273]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.040268, 2.2489085, 94.9072)
+size = Vector3(0.064953126, 3, 15.7533045)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor108" unique_id=991581979]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor108" unique_id=116138301]
+
+[node name="Lobby Floor96" type="CSGBox3D" parent="." unique_id=1188689860]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.98512, 1.7381663, 95.42117)
+size = Vector3(0.001, 1.9785156, 19.347736)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor96" unique_id=1778027269]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor96" unique_id=257559959]
+
+[node name="Lobby Floor111" type="CSGBox3D" parent="." unique_id=1107996677]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.98512, 1.7381663, 103.95997)
+size = Vector3(0.001, 1.9785156, 2.5339718)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor111" unique_id=1535567357]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor111" unique_id=532396555]
+
+[node name="Lobby Floor97" type="CSGBox3D" parent="." unique_id=1885428641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.98512, 1.7381663, 107.95149)
+size = Vector3(0.001, 1.9785156, 3.6685684)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor97" unique_id=827193328]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor97" unique_id=1231700865]
+
+[node name="Lobby Floor112" type="CSGBox3D" parent="." unique_id=1020353919]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.06284, 2.2461278, 103.90872)
+size = Vector3(0.001, 3.0057373, 2.4525328)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor112" unique_id=1238029784]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor112" unique_id=1795253331]
+
+[node name="Lobby Floor113" type="CSGBox3D" parent="." unique_id=249648302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.06284, 2.2664526, 107.90312)
+size = Vector3(0.001, 3.0463867, 3.744252)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor113" unique_id=113774232]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor113" unique_id=209630939]
+
+[node name="Lobby Floor114" type="CSGBox3D" parent="." unique_id=568566957]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.06284, 3.088535, 107.450485)
+size = Vector3(0.001, 1.4022217, 4.6495256)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor114" unique_id=296085105]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor114" unique_id=417670826]
+
+[node name="Lobby Floor115" type="CSGBox3D" parent="." unique_id=502565811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.06284, 2.2461278, 83.19364)
+size = Vector3(0.001, 3.0057373, 2.5339718)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor115" unique_id=1819591545]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor115" unique_id=855085619]
+
+[node name="Lobby Floor116" type="CSGBox3D" parent="." unique_id=1768920566]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.06284, 2.2664526, 87.29918)
+size = Vector3(0.001, 3.0463867, 3.440541)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor116" unique_id=958425578]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor116" unique_id=717771686]
+
+[node name="Lobby Floor117" type="CSGBox3D" parent="." unique_id=1408188567]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.06284, 3.088535, 86.69469)
+size = Vector3(0.001, 1.4022217, 4.6495256)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor117" unique_id=1945739727]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor117" unique_id=1876954077]
+
+[node name="Lobby Floor98" type="CSGBox3D" parent="." unique_id=60296731]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.98512, 2.5526195, 96.969315)
+size = Vector3(0.001, 0.34960938, 25.632923)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor98" unique_id=1107824597]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor98" unique_id=1466409121]
+
+[node name="Lobby Floor88" type="CSGBox3D" parent="." unique_id=1727079254]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8405342, 2.2489085, 95.400024)
+size = Vector3(0.001, 3, 28.69886)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor88" unique_id=785192767]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor88" unique_id=1089057206]
+
+[node name="Lobby Floor87" type="CSGBox3D" parent="." unique_id=1358012058]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.531422, 2.2489085, 109.67678)
+size = Vector3(38.755432, 3, 0.001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor87" unique_id=1900801272]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor87" unique_id=893875261]
+
+[node name="Lobby Floor85" type="CSGBox3D" parent="." unique_id=1794731242]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.18526, 2.2716334, 81.044365)
+size = Vector3(2.7633057, 3, 0.001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor85" unique_id=2101982767]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor85" unique_id=1539069344]
+
+[node name="Lobby Floor95" type="CSGBox3D" parent="." unique_id=478701868]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.82367, 2.2716334, 81.044365)
+size = Vector3(2.5144653, 3, 0.001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor95" unique_id=1878773860]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor95" unique_id=2136789616]
+
+[node name="Lobby Floor86" type="CSGBox3D" parent="." unique_id=586856075]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.078693, 2.9513123, 81.03726)
+size = Vector3(2.9954834, 1.3398438, 0.001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lobby Floor86" unique_id=182561951]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lobby Floor86" unique_id=928976762]
+
+[node name="ElevatorDoor" type="MeshInstance3D" parent="." unique_id=1040556159]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -9.095089, 2.5734062, 49.4276)
+material_override = SubResource("StandardMaterial3D_eow3j")
+mesh = ExtResource("6_ryrav")
