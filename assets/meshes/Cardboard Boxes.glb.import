@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dqrfg18d3y5pg"
-path="res://.godot/imported/Casual.fbx-4eb6c0d094da9d9dd3ec3966ec546969.scn"
+uid="uid://b34vff7natop5"
+path="res://.godot/imported/Cardboard Boxes.glb-2fa572f423d572aa98938ab552b9d77e.scn"
 
 [deps]
 
-source_file="res://assets/3d-models/Casual.fbx"
-dest_files=["res://.godot/imported/Casual.fbx-4eb6c0d094da9d9dd3ec3966ec546969.scn"]
+source_file="res://assets/meshes/Cardboard Boxes.glb"
+dest_files=["res://.godot/imported/Cardboard Boxes.glb-2fa572f423d572aa98938ab552b9d77e.scn"]
 
 [params]
 
@@ -30,7 +30,7 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=true
+animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
@@ -38,7 +38,5 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-fbx/importer=0
-fbx/allow_geometry_helper_nodes=false
-fbx/embedded_image_handling=1
-fbx/naming_version=2
+gltf/naming_version=2
+gltf/embedded_image_handling=1

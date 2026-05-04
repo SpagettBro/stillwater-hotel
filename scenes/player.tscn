@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ce6hkkvc685tb"]
 
 [ext_resource type="Script" uid="uid://dnbwyejewvswd" path="res://scenes/player.gd" id="1_qhqgy"]
-[ext_resource type="PackedScene" uid="uid://dq7efsjiw46dw" path="res://assets/3d-models/flashlight.glb" id="2_g2els"]
+[ext_resource type="PackedScene" uid="uid://dq7efsjiw46dw" path="res://assets/meshes/flashlight.glb" id="2_g2els"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_g2els"]
 radius = 0.25

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dwwwuawmj04jh"]
 
 [ext_resource type="Script" uid="uid://bjpe0uj0jkbw3" path="res://scenes/keeper.gd" id="1_6b2k5"]
-[ext_resource type="PackedScene" uid="uid://dy2qeoi8jc1go" path="res://assets/3d-models/Ogre.glb" id="1_nogqu"]
+[ext_resource type="PackedScene" uid="uid://dy2qeoi8jc1go" path="res://assets/meshes/Ogre.glb" id="1_nogqu"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6b2k5"]
 radius = 0.4

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://4bc2r0ypjuan"
-path="res://.godot/imported/Bottle.glb-1106d619a77f2e6be85e6c16e217c4da.scn"
+uid="uid://laj3t4m2k6gg"
+path="res://.godot/imported/Rug.glb-7caf0e8ab275614868a4062df11827fa.scn"
 
 [deps]
 
-source_file="res://assets/3d-models/Bottle.glb"
-dest_files=["res://.godot/imported/Bottle.glb-1106d619a77f2e6be85e6c16e217c4da.scn"]
+source_file="res://assets/meshes/Rug.glb"
+dest_files=["res://.godot/imported/Rug.glb-7caf0e8ab275614868a4062df11827fa.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://chspmkajrjj23"
-path="res://.godot/imported/no_head.glb-1fb72f69cd13961e43b19dd9eaae27f6.scn"
+uid="uid://ckkriehpgbyeu"
+path="res://.godot/imported/Rubbish.glb-950e69c3c804bce84552b3c98e6ce2cd.scn"
 
 [deps]
 
-source_file="res://assets/3d-models/no_head.glb"
-dest_files=["res://.godot/imported/no_head.glb-1fb72f69cd13961e43b19dd9eaae27f6.scn"]
+source_file="res://assets/meshes/Rubbish.glb"
+dest_files=["res://.godot/imported/Rubbish.glb-950e69c3c804bce84552b3c98e6ce2cd.scn"]
 
 [params]
 

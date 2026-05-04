@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpbqgk8y5g506"
-path.s3tc="res://.godot/imported/no_head_LightSkin.png-09ae6c26bbdd57db001736f615558206.s3tc.ctex"
+uid="uid://dxc7fsubkbmv2"
+path.s3tc="res://.godot/imported/Bed_House_Props_Diffuse.png-e6defaf949d45ceb5dc6772aefd98aab.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "8c5665db19e691011a15f2a97c54d0fc"
+"md5": "86f397ace68d6e758810bd2471c3c8f3"
 }
 
 [deps]
 
-source_file="res://assets/3d-models/no_head_LightSkin.png"
-dest_files=["res://.godot/imported/no_head_LightSkin.png-09ae6c26bbdd57db001736f615558206.s3tc.ctex"]
+source_file="res://assets/meshes/Bed_House_Props_Diffuse.png"
+dest_files=["res://.godot/imported/Bed_House_Props_Diffuse.png-e6defaf949d45ceb5dc6772aefd98aab.s3tc.ctex"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dq7efsjiw46dw"
-path="res://.godot/imported/flashlight.glb-3d7f433ca397d95cd93325fe498fa5a5.scn"
+uid="uid://dy2qeoi8jc1go"
+path="res://.godot/imported/Ogre.glb-92cbf86b31d8b7a42f0ffe4d54f26e66.scn"
 
 [deps]
 
-source_file="res://assets/3d-models/flashlight.glb"
-dest_files=["res://.godot/imported/flashlight.glb-3d7f433ca397d95cd93325fe498fa5a5.scn"]
+source_file="res://assets/meshes/Ogre.glb"
+dest_files=["res://.godot/imported/Ogre.glb-92cbf86b31d8b7a42f0ffe4d54f26e66.scn"]
 
 [params]
 

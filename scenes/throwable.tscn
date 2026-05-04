@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bxgl31vylwr24" path="res://scenes/throwable.gd" id="1_ef5ia"]
 [ext_resource type="AudioStream" uid="uid://cfphwykkjd3li" path="res://assets/sfx/mixkit-wood-hard-hit-2182.mp3" id="2_ef5ia"]
-[ext_resource type="PackedScene" uid="uid://4bc2r0ypjuan" path="res://assets/3d-models/Bottle.glb" id="3_nputv"]
+[ext_resource type="PackedScene" uid="uid://4bc2r0ypjuan" path="res://assets/meshes/Bottle.glb" id="3_nputv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pw63i"]
 size = Vector3(0.3, 0.7, 0.3)
